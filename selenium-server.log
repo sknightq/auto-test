@@ -1,0 +1,29 @@
+17:01:38.946 INFO [GridLauncherV3.parse] - Selenium server version: 3.141.59, revision: e82be7d358
+17:01:39.005 INFO [GridLauncherV3.lambda$buildLaunchers$3] - Launching a standalone Selenium Server on port 4444
+2019-04-16 17:01:39.047:INFO::main: Logging initialized @273ms to org.seleniumhq.jetty9.util.log.StdErrLog
+17:01:39.247 INFO [WebDriverServlet.<init>] - Initialising WebDriverServlet
+17:01:39.359 INFO [SeleniumServer.boot] - Selenium Server is up and running on port 4444
+17:01:39.604 INFO [ActiveSessionFactory.apply] - Capabilities are: {
+  "acceptSslCerts": true,
+  "browserName": "chrome",
+  "chromeOptions": {
+    "binary": "\u002fUsers\u002fsknight\u002fapplications\u002fGoogle Chrome.app\u002fContents\u002fMacOS\u002fGoogle Chrome",
+    "args": [
+      "--no-sandbox"
+    ]
+  },
+  "loggingPrefs": {
+    "browser": "INFO",
+    "driver": "INFO",
+    "server": "OFF"
+  },
+  "name": "Test"
+}
+17:01:39.606 INFO [ActiveSessionFactory.lambda$apply$11] - Matched factory org.openqa.selenium.grid.session.remote.ServicedSession$Factory (provider: org.openqa.selenium.chrome.ChromeDriverService)
+Starting ChromeDriver 2.46.628411 (3324f4c8be9ff2f70a05a30ebc72ffb013e1a71e) on port 44692
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+[1555405299.980][WARNING]: Ignoring unrecognized log type: server
+17:01:40.978 INFO [ProtocolHandshake.createSession] - Detected dialect: OSS
+17:01:41.199 INFO [RemoteSession$Factory.lambda$performHandshake$0] - Started new session 621fe84287c59839182993a485ba87e5 (org.openqa.selenium.chrome.ChromeDriverService)
+17:01:55.632 INFO [ActiveSessions$1.onStop] - Removing session 621fe84287c59839182993a485ba87e5 (org.openqa.selenium.chrome.ChromeDriverService)

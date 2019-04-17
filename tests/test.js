@@ -1,26 +1,32 @@
 module.exports = {
-  'Test HLS in chrome': function(browser) {
+  'Test HLS in Chrome': browser => {
     browser
       .url('http://127.0.0.1:8080')
-      .pause(6000)
-      .waitForElementVisible('body')
+      .listenXHR()
       .waitForFirstXHR(
-        'user/([0-9]*)/details',
+        /([^.]+|.*\.m3u8)$/,
         1000,
-        function browserTrigger() {
-          browser.click('.update')
+        // trigger brower
+        () => {
+          browser.click('button[title="Play Video"]')
         },
-        function assertValues(xhr) {
+        // assetValues
+        xhr => {
           browser.assert.equal(xhr.status, 'success')
-          browser.assert.equal(xhr.method, 'POST')
-          browser.assert.equal(xhr.requestData, '200')
+          browser.assert.equal(xhr.method, 'GET')
           browser.assert.equal(xhr.httpResponseCode, '200')
-          browser.assert.equal(xhr.responseData, '')
+          browser.assert.notEqual(xhr.responseData.length, 0)
         }
       )
-      .click('button[title="Play Video"]')
-      .pause(6000)
-
+      .getXHR(
+        /([^.]+|.*\.ts)$/,
+        1000,
+        xhrs => {
+          // NOTE: getXHR 只能看发起的请求
+          // 判断视频流切片是否发起
+          browser.assert.notEqual(xhrs.find(x => x.method==='GET').url, '')
+        }
+      )
       .end()
   }
 }

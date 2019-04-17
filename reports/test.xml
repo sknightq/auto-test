@@ -13,7 +13,7 @@
   
     
     <testcase
-      name="Demo test baidu" classname="test">
+      name="Test HLS in chrome" classname="test">
       <skipped />
     </testcase>
     

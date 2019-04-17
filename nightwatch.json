@@ -4,10 +4,10 @@
   ],
   "output_folder": "reports",
   "custom_commands_path": [
-    "./node_modules/nightwatch-xhr/src/commands"
+    "./node_modules/nightwatch-xhr/es5/commands"
   ],
   "custom_assertions_path": [
-    "./node_modules/nightwatch-xhr/src/assertions"
+    "./node_modules/nightwatch-xhr/es5/assertions"
   ],
   "webdriver": {
     "server_path": "node_modules/.bin/chromedriver",
@@ -22,7 +22,7 @@
     "log_path": "",
     "port": 4444,
     "cli_args": {
-      "webdriver.chrome.driver": "node_modules/.bin/chromedriver"
+      "webdriver.chrome.driver": "node_modules/chromedriver/lib/chromedriver/chromedriver.exe"
     }
   },
   "test_settings": {
@@ -30,7 +30,6 @@
       "desiredCapabilities": {
         "browserName": "chrome",
         "chromeOptions": {
-          "binary": "/Users/sknight/applications/Google Chrome.app/Contents/MacOS/Google Chrome",
           "args": [
             "--no-sandbox"
           ]

@@ -6,8 +6,10 @@
 **/*.vs
 .DS_Store
 node_modules/
-/dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 selenium-debug.log
+reports/
+tests_output/
+*.log
